@@ -1,0 +1,54 @@
+#circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-left: calc(50% - 25px);
+  background-color: black;
+  position:relative;
+  top:-25px;
+}
+#cd > p{
+  width: 100%;
+  text-align: left;
+  border-top:1px solid;
+}
+
+#setting{
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+#DefaultValue{
+  position: fixed;
+  left: 0;
+  padding-left: 0;
+  height: 100%;
+}
+
+#navi{
+  padding-top:35px;
+  padding-left: 20px;
+  width: 50%;
+  height: 100%;
+  border-right:1px solid;
+  padding-right: 20px;
+}
+
+#velo{
+  left:25%;
+}
+
+#position{
+  position: absolute;
+  width: 75%;
+  left: 25%;
+  margin-top:100px;
+  margin-bottom: 100px;
+  min-width: 100vh;
+}
+.meter{
+  position: absolute;
+  width: 15%;
+  border-bottom: 1px solid;
+}
