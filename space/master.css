@@ -18,3 +18,21 @@
   width: 30px;
   position: absolute;
 }
+
+#info{
+  width: 500px;
+  position: fixed;
+  color: white;
+  background-color: black;
+  top:0;
+  border: 1px solid white;
+  z-index: 1000;
+}
+
+#set{
+  position: fixed;
+  z-index: 1000001;
+  background-color: white;
+  width: 500px;
+  padding: 30px;
+}

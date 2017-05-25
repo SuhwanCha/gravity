@@ -19,12 +19,62 @@
     <title></title>
   </head>
   <body>
+
+    <div id='info'>
+      <p>Acceleration (x) : <span class="ax"></span>m/s<sup>2</sup></p>
+      <p>Acceleration (y) : <span class="ay"></span>m/s<sup>2</sup></p>
+      <p>Velocity (x) : <span class="vx"></span>m/s</p>
+      <p>Velocity (y) : <span class="vy"></span>m/s</p>
+      <p>Location (x) : <span class='sx'></span>m</p>
+      <p>Location (y) : <span class='sy'></span>m</p>
+    </div>
+
+    <div id='set'>
+      <form>
+
+        <div class="form-group">
+            <label for="M1">태양 무게(kg)</label>
+            <input type="number" class="form-control" id="m1" value="1989000000000000000000000000000">
+        </div>
+
+
+          <div class="form-group">
+              <label for="">지구 무게(kg)</label>
+              <input type="number" class="form-control" id="m2" value="5974200000000000000000000">
+          </div>
+
+          <div class="form-group">
+            <label for="sx">지구 - 태양 거리(m), x축</label>
+            <input type="number" class="form-control" id="sx" value="149600000000">
+          </div>
+
+          <div class="form-group">
+            <label for="sy">지구 - 태양 거리(m), y축</label>
+            <input type="number" class="form-control" id="sy" value="0">
+          </div>
+
+          <div class="form-group">
+            <label for="vx">초기속도 (m/s), x축</label>
+            <input type="number" class="form-control" id="vx" value="0">
+          </div>
+
+          <div class="form-group">
+            <label for="vy">초기속도 (m/s), y축</label>
+            <input type="number" class="form-control" id="vy" value="30287">
+          </div>
+
+      </form>
+      <button type="button" id='started' onclick="start();" value="시작">시작</button>
+      <br>
+    </div>
+
     <div id='wrap'>
       <!-- 1,391,400km -->
-      <img data-toggle="tooltip" id='sun' src='img/sun.jpeg' title='Sun'>
+      <img data-toggle="tooltip" class='info' id='sun' src='img/sun.jpeg' title='Sun'>
       <!-- 12,742km -->
-      <img data-toggle="tooltip" id='earth' src="img/earth.jpg" title="Earth">
+      <img data-toggle="tooltip" class='info' id='earth' src="img/earth.jpg" title="Earth<br>asdas">
     </div>
+
 
     <script src='gravity.js'>
 
