@@ -1,3 +1,4 @@
+// Copyright gdb.kr Co. 2017
 // gravity constant
 var G = 6.67384 * Math.pow(10, -11);
 
@@ -8,9 +9,8 @@ var SunM = 1.989 * Math.pow(10,30);
 
 var LocateXdt= [], LocateYdt= [], VX= [], VY= [], AX= [], AY= [];
 
-var flag = 1;
 
-LocateXdt[0] = 149600000000;
+LocateXdt[0] = 147500000000;
 LocateYdt[0] = 0;
 
 VX[0] = 0;
@@ -57,31 +57,12 @@ var Space = class {
     //   this.Velocity();
     //   this.Position();
     //   console.log((Math.pow(AX[this.i],2) + Math.pow(AY[this.i],2)) / Math.pow(F[this.i],2));
-    // }
+    // } // 디버깅용 함수
   }
 
   Accel(){
     AX[this.i] = F[this.i] * LocateXdt[this.i] / Math.sqrt(distance[this.i]) * (-1);
     AY[this.i] = F[this.i] * LocateYdt[this.i] / Math.sqrt(distance[this.i]) * (-1);
-    // switch (flag) {
-    //   case 1:
-    //     AX *= -1;
-    //     AY *= -1;
-    //     break;
-    //
-    //   case 2:
-    //     AY *= -1;
-    //     break;
-    //
-    //   case 3:
-    //     break;
-    //
-    //   case 4:
-    //     AX *= -1;
-    //
-    //   default:
-    //
-    // }
   }
 
   Velocity(){
@@ -123,7 +104,7 @@ function start(){
   LocateYdt[0] = parseInt($("#sy").val());
   VX[0] = parseInt($("#vx").val());
   VY[0] = parseInt($("#vy").val());
-
+  Space.dt = parseInt($("#time").val());
   distance[0] = Math.pow(LocateYdt[0],2) + Math.pow(LocateXdt[0],2);
   F[0] = G*SunM / distance[0];
   AY[0] = F[0] * LocateYdt[0] * -1;
@@ -138,7 +119,6 @@ function start(){
     Space.Move();
     Space.Text();
     Space.i++;
-    // console.log(Space.i);
   },1)
 
 }
